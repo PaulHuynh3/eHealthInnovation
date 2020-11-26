@@ -19,6 +19,19 @@ class HomeViewModel {
         self.delegate = delegate
     }
 
+    var setTitle: (State) -> String = {
+        switch $0 {
+        case .loading:
+            return "Loading Information"
+        case .loaded:
+            return "Patient Information"
+        }
+    }
+}
+
+enum State {
+    case loading
+    case loaded
 }
 
 protocol HomeViewModelDelegate: class {

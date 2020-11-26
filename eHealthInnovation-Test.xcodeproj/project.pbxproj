@@ -41,12 +41,13 @@
 		EB31CDFE25701888000241D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB31CE0025701888000241D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB31CE0525701888000241D7 /* eHealthInnovation-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eHealthInnovation-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB31CE0925701888000241D7 /* eHealthInnovation_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eHealthInnovation_TestTests.swift; sourceTree = "<group>"; };
+		EB31CE0925701888000241D7 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		EB31CE0B25701888000241D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB31CE1B257019F2000241D7 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		EB31CE1D25701A45000241D7 /* PatientInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationService.swift; sourceTree = "<group>"; };
 		EB31CE1F25701A55000241D7 /* PatientInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationRepository.swift; sourceTree = "<group>"; };
 		EB31CE2125701AA7000241D7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EBEE173D25702A93006D1846 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +106,7 @@
 		EB31CE0825701888000241D7 /* eHealthInnovation-TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB31CE0925701888000241D7 /* eHealthInnovation_TestTests.swift */,
+				EB31CE0925701888000241D7 /* HomeViewModelTests.swift */,
 				EB31CE0B25701888000241D7 /* Info.plist */,
 			);
 			path = "eHealthInnovation-TestTests";
@@ -294,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB31CE0A25701888000241D7 /* eHealthInnovation_TestTests.swift in Sources */,
+				EB31CE0A25701888000241D7 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

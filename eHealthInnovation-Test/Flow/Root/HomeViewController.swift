@@ -11,12 +11,20 @@ import UIKit
 class HomeViewController: UIViewController {
     // MARK: - Properties
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+
     let viewModel = HomeViewModel()
 
     // MARK: - ViewController Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.configure(delegate: self)
+        setup()
+    }
+
+    func setup() {
+        titleLabel.text = viewModel.setTitle(.loaded)
     }
 }
 
@@ -35,7 +43,6 @@ extension HomeViewController: TableView {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
     }
 
 }
