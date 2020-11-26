@@ -6,7 +6,7 @@
 //  Copyright © 2020 Paul Corp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class HomeViewModel {
     // MARK: - Properties

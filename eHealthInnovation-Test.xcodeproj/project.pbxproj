@@ -13,11 +13,12 @@
 		EB31CDFA25701888000241D7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB31CDF825701888000241D7 /* HomeViewController.storyboard */; };
 		EB31CDFC25701888000241D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB31CDFB25701888000241D7 /* Assets.xcassets */; };
 		EB31CDFF25701888000241D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB31CDFD25701888000241D7 /* LaunchScreen.storyboard */; };
-		EB31CE0A25701888000241D7 /* eHealthInnovation_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE0925701888000241D7 /* eHealthInnovation_TestTests.swift */; };
+		EB31CE0A25701888000241D7 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE0925701888000241D7 /* HomeViewModelTests.swift */; };
 		EB31CE1C257019F2000241D7 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1B257019F2000241D7 /* Patient.swift */; };
 		EB31CE1E25701A45000241D7 /* PatientInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1D25701A45000241D7 /* PatientInformationService.swift */; };
 		EB31CE2025701A55000241D7 /* PatientInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1F25701A55000241D7 /* PatientInformationRepository.swift */; };
 		EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE2125701AA7000241D7 /* HomeViewModel.swift */; };
+		EBEE173E25702A93006D1846 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE173D25702A93006D1846 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 				EB31CE19257019D1000241D7 /* Service */,
 				EB31CE1A257019DF000241D7 /* Repository */,
 				EB31CE0025701888000241D7 /* Info.plist */,
+				EBEE173C25702A80006D1846 /* Helper */,
 				EB31CE14257018BA000241D7 /* Supporting Files */,
 			);
 			path = "eHealthInnovation-Test";
@@ -166,6 +168,14 @@
 			);
 			name = Repository;
 			path = Service;
+			sourceTree = "<group>";
+		};
+		EBEE173C25702A80006D1846 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE173D25702A93006D1846 /* TableView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +284,7 @@
 				EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */,
 				EB31CE1C257019F2000241D7 /* Patient.swift in Sources */,
 				EB31CDF325701888000241D7 /* AppDelegate.swift in Sources */,
+				EBEE173E25702A93006D1846 /* TableView.swift in Sources */,
 				EB31CDF525701888000241D7 /* SceneDelegate.swift in Sources */,
 				EB31CE1E25701A45000241D7 /* PatientInformationService.swift in Sources */,
 			);
