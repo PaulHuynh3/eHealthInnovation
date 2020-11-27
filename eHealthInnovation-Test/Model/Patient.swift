@@ -8,8 +8,29 @@
 
 import Foundation
 
-struct Patient {
-    let name: String? //Looked at the response I don't see the name
-    let gender: String //Gender is all set to unknown
-    let birthData: String
+//Move to seprate Models later
+struct PatientData: Codable {
+    let entry: [Entry]
 }
+
+struct Entry: Codable, Equatable {
+    static func == (lhs: Entry, rhs: Entry) -> Bool {
+        return lhs.resource?.id == rhs.resource?.id
+    }
+
+    let fullUrl: String?
+    let resource: Resource?
+}
+
+struct Resource: Codable {
+    let id: String?
+    let name: [GivenName]?
+    let gender: String?
+    let birthDate: String?
+}
+
+struct GivenName: Codable {
+    let family: String?
+    let given: [String]?
+}
+

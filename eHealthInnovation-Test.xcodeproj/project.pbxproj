@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB23971E257062F2002712A7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23971D257062F2002712A7 /* NetworkService.swift */; };
 		EB31CDF325701888000241D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CDF225701888000241D7 /* AppDelegate.swift */; };
 		EB31CDF525701888000241D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CDF425701888000241D7 /* SceneDelegate.swift */; };
 		EB31CDF725701888000241D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CDF625701888000241D7 /* HomeViewController.swift */; };
@@ -16,8 +17,9 @@
 		EB31CE0A25701888000241D7 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE0925701888000241D7 /* HomeViewModelTests.swift */; };
 		EB31CE1C257019F2000241D7 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1B257019F2000241D7 /* Patient.swift */; };
 		EB31CE1E25701A45000241D7 /* PatientInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1D25701A45000241D7 /* PatientInformationService.swift */; };
-		EB31CE2025701A55000241D7 /* PatientInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE1F25701A55000241D7 /* PatientInformationRepository.swift */; };
 		EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE2125701AA7000241D7 /* HomeViewModel.swift */; };
+		EBD4F8F1257094DB00E979AA /* PatientInformationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F0257094DB00E979AA /* PatientInformationServiceTest.swift */; };
+		EBD4F8F42570AA6E00E979AA /* PatientInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F32570AA6E00E979AA /* PatientInformationRepository.swift */; };
 		EBEE173E25702A93006D1846 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE173D25702A93006D1846 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB23971D257062F2002712A7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EB31CDEF25701888000241D7 /* eHealthInnovation-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eHealthInnovation-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB31CDF225701888000241D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB31CDF425701888000241D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +48,9 @@
 		EB31CE0B25701888000241D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB31CE1B257019F2000241D7 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		EB31CE1D25701A45000241D7 /* PatientInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationService.swift; sourceTree = "<group>"; };
-		EB31CE1F25701A55000241D7 /* PatientInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationRepository.swift; sourceTree = "<group>"; };
 		EB31CE2125701AA7000241D7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EBD4F8F0257094DB00E979AA /* PatientInformationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationServiceTest.swift; sourceTree = "<group>"; };
+		EBD4F8F32570AA6E00E979AA /* PatientInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationRepository.swift; sourceTree = "<group>"; };
 		EBEE173D25702A93006D1846 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +99,7 @@
 				EB31CE172570194B000241D7 /* LaunchScreen */,
 				EB31CE18257019C2000241D7 /* Model */,
 				EB31CE19257019D1000241D7 /* Service */,
-				EB31CE1A257019DF000241D7 /* Repository */,
+				EBD4F8F22570AA5000E979AA /* Repository */,
 				EB31CE0025701888000241D7 /* Info.plist */,
 				EBEE173C25702A80006D1846 /* Helper */,
 				EB31CE14257018BA000241D7 /* Supporting Files */,
@@ -106,7 +110,8 @@
 		EB31CE0825701888000241D7 /* eHealthInnovation-TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB31CE0925701888000241D7 /* HomeViewModelTests.swift */,
+				EBD4F8ED257094A300E979AA /* Flow */,
+				EBD4F8EF257094B800E979AA /* Service */,
 				EB31CE0B25701888000241D7 /* Info.plist */,
 			);
 			path = "eHealthInnovation-TestTests";
@@ -158,17 +163,41 @@
 			isa = PBXGroup;
 			children = (
 				EB31CE1D25701A45000241D7 /* PatientInformationService.swift */,
+				EB23971D257062F2002712A7 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		EB31CE1A257019DF000241D7 /* Repository */ = {
+		EBD4F8ED257094A300E979AA /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				EB31CE1F25701A55000241D7 /* PatientInformationRepository.swift */,
+				EBD4F8EE257094A900E979AA /* Root */,
 			);
-			name = Repository;
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EBD4F8EE257094A900E979AA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				EB31CE0925701888000241D7 /* HomeViewModelTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EBD4F8EF257094B800E979AA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4F8F0257094DB00E979AA /* PatientInformationServiceTest.swift */,
+			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		EBD4F8F22570AA5000E979AA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4F8F32570AA6E00E979AA /* PatientInformationRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		EBEE173C25702A80006D1846 /* Helper */ = {
@@ -280,10 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB31CE2025701A55000241D7 /* PatientInformationRepository.swift in Sources */,
+				EBD4F8F42570AA6E00E979AA /* PatientInformationRepository.swift in Sources */,
 				EB31CDF725701888000241D7 /* HomeViewController.swift in Sources */,
 				EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */,
 				EB31CE1C257019F2000241D7 /* Patient.swift in Sources */,
+				EB23971E257062F2002712A7 /* NetworkService.swift in Sources */,
 				EB31CDF325701888000241D7 /* AppDelegate.swift in Sources */,
 				EBEE173E25702A93006D1846 /* TableView.swift in Sources */,
 				EB31CDF525701888000241D7 /* SceneDelegate.swift in Sources */,
@@ -295,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD4F8F1257094DB00E979AA /* PatientInformationServiceTest.swift in Sources */,
 				EB31CE0A25701888000241D7 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
