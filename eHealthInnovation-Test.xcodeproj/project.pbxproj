@@ -20,6 +20,14 @@
 		EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31CE2125701AA7000241D7 /* HomeViewModel.swift */; };
 		EBD4F8F1257094DB00E979AA /* PatientInformationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F0257094DB00E979AA /* PatientInformationServiceTest.swift */; };
 		EBD4F8F42570AA6E00E979AA /* PatientInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F32570AA6E00E979AA /* PatientInformationRepository.swift */; };
+		EBD4F8F72570AC6A00E979AA /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F62570AC6A00E979AA /* AlertManager.swift */; };
+		EBD4F8F92570AC8700E979AA /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8F82570AC8700E979AA /* HomeBuilder.swift */; };
+		EBD4F8FF2570B37900E979AA /* PatientNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F8FD2570B37900E979AA /* PatientNameCell.swift */; };
+		EBD4F9002570B37900E979AA /* PatientNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBD4F8FE2570B37900E979AA /* PatientNameCell.xib */; };
+		EBD4F9022570BBC700E979AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F9012570BBC700E979AA /* Extensions.swift */; };
+		EBD4F9052570C8D800E979AA /* PatientSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F9042570C8D800E979AA /* PatientSelectedViewController.swift */; };
+		EBD4F9072570C8F400E979AA /* PatientSelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD4F9062570C8F400E979AA /* PatientSelectedViewController.storyboard */; };
+		EBD4F9092570CED600E979AA /* PatientSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */; };
 		EBEE173E25702A93006D1846 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE173D25702A93006D1846 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +59,14 @@
 		EB31CE2125701AA7000241D7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EBD4F8F0257094DB00E979AA /* PatientInformationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationServiceTest.swift; sourceTree = "<group>"; };
 		EBD4F8F32570AA6E00E979AA /* PatientInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInformationRepository.swift; sourceTree = "<group>"; };
+		EBD4F8F62570AC6A00E979AA /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		EBD4F8F82570AC8700E979AA /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		EBD4F8FD2570B37900E979AA /* PatientNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientNameCell.swift; sourceTree = "<group>"; };
+		EBD4F8FE2570B37900E979AA /* PatientNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientNameCell.xib; sourceTree = "<group>"; };
+		EBD4F9012570BBC700E979AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EBD4F9042570C8D800E979AA /* PatientSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSelectedViewController.swift; sourceTree = "<group>"; };
+		EBD4F9062570C8F400E979AA /* PatientSelectedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientSelectedViewController.storyboard; sourceTree = "<group>"; };
+		EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSelectedViewModel.swift; sourceTree = "<group>"; };
 		EBEE173D25702A93006D1846 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +155,9 @@
 				EB31CDF825701888000241D7 /* HomeViewController.storyboard */,
 				EB31CDF625701888000241D7 /* HomeViewController.swift */,
 				EB31CE2125701AA7000241D7 /* HomeViewModel.swift */,
+				EBD4F9032570C89B00E979AA /* PatientSelection */,
+				EBD4F8FA2570B29E00E979AA /* Cell */,
+				EBD4F8F52570ABF100E979AA /* Builder */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -200,10 +219,39 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		EBD4F8F52570ABF100E979AA /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4F8F82570AC8700E979AA /* HomeBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EBD4F8FA2570B29E00E979AA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4F8FD2570B37900E979AA /* PatientNameCell.swift */,
+				EBD4F8FE2570B37900E979AA /* PatientNameCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EBD4F9032570C89B00E979AA /* PatientSelection */ = {
+			isa = PBXGroup;
+			children = (
+				EBD4F9042570C8D800E979AA /* PatientSelectedViewController.swift */,
+				EBD4F9062570C8F400E979AA /* PatientSelectedViewController.storyboard */,
+				EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */,
+			);
+			path = PatientSelection;
+			sourceTree = "<group>";
+		};
 		EBEE173C25702A80006D1846 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				EBEE173D25702A93006D1846 /* TableView.swift */,
+				EBD4F8F62570AC6A00E979AA /* AlertManager.swift */,
+				EBD4F9012570BBC700E979AA /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -291,7 +339,9 @@
 			files = (
 				EB31CDFF25701888000241D7 /* LaunchScreen.storyboard in Resources */,
 				EB31CDFC25701888000241D7 /* Assets.xcassets in Resources */,
+				EBD4F9002570B37900E979AA /* PatientNameCell.xib in Resources */,
 				EB31CDFA25701888000241D7 /* HomeViewController.storyboard in Resources */,
+				EBD4F9072570C8F400E979AA /* PatientSelectedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,13 +361,19 @@
 			files = (
 				EBD4F8F42570AA6E00E979AA /* PatientInformationRepository.swift in Sources */,
 				EB31CDF725701888000241D7 /* HomeViewController.swift in Sources */,
+				EBD4F8F72570AC6A00E979AA /* AlertManager.swift in Sources */,
+				EBD4F8F92570AC8700E979AA /* HomeBuilder.swift in Sources */,
 				EB31CE2225701AA7000241D7 /* HomeViewModel.swift in Sources */,
 				EB31CE1C257019F2000241D7 /* Patient.swift in Sources */,
 				EB23971E257062F2002712A7 /* NetworkService.swift in Sources */,
 				EB31CDF325701888000241D7 /* AppDelegate.swift in Sources */,
+				EBD4F9022570BBC700E979AA /* Extensions.swift in Sources */,
 				EBEE173E25702A93006D1846 /* TableView.swift in Sources */,
 				EB31CDF525701888000241D7 /* SceneDelegate.swift in Sources */,
+				EBD4F9052570C8D800E979AA /* PatientSelectedViewController.swift in Sources */,
+				EBD4F8FF2570B37900E979AA /* PatientNameCell.swift in Sources */,
 				EB31CE1E25701A45000241D7 /* PatientInformationService.swift in Sources */,
+				EBD4F9092570CED600E979AA /* PatientSelectedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

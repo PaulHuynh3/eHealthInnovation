@@ -12,14 +12,17 @@ import XCTest
 class HomeViewModelTests: XCTestCase {
 
     var viewModel: HomeViewModel!
+    var patientInformationService = PatientInformationService.sharedInstance
+    var mockHomeDelegate = MockHomeDelegate()
 
     override func setUp() {
         viewModel = HomeViewModel()
+        viewModel.delegate = mockHomeDelegate
     }
 
     func testTitleGivenLoadedState() {
         // Given
-        let loadedStateTitle = viewModel.setTitle(.loaded)
+        let loadedStateTitle = viewModel.setTitle(.success)
 
         // Then
         XCTAssertEqual(loadedStateTitle, "Patient Information")
@@ -33,4 +36,35 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(loadingStateTitle, "Loading Information")
     }
 
+    func testTitleGivenFailedState() {
+        // Given
+        let failedStateTitle = viewModel.setTitle(.failure)
+
+        // Then
+        XCTAssertEqual(failedStateTitle, "Please try again")
+    }
+
+    func testOpenAlertWasCalledGivenFailedRequest() {
+        //GIVEN
+        let mockPatientRepository = MockPatientRepository()
+        patientInformationService.patientRepository = mockPatientRepository
+        mockPatientRepository.shouldFailRequest = true
+
+        //WHEN
+        viewModel.fetchPatientInformation(success: {}) {}
+
+        //THEN
+
+        XCTAssertTrue(mockHomeDelegate.openAlertWasCalled)
+    }
+}
+
+extension HomeViewModelTests {
+    class MockHomeDelegate: HomeViewModelDelegate {
+        var openAlertWasCalled = false
+
+        func openAlert(data: AlertManager.Data) {
+            openAlertWasCalled = true
+        }
+    }
 }

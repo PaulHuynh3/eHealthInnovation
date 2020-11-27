@@ -52,20 +52,16 @@ class PatientInformationServiceTest: XCTestCase {
 
 }
 
-extension PatientInformationServiceTest {
-    class MockPatientRepository: PatientInformationRepository {
-        var shouldFailRequest = false
+class MockPatientRepository: PatientInformationRepository {
+    var shouldFailRequest = false
 
-        var entry = { () -> Entry in
-            let givenName = GivenName(family: "Huynh", given: ["Paul"])
-            let resource = Resource(id: "123456", name: [givenName], gender: "male", birthDate: "1991-06-05")
-            return Entry(fullUrl: "www.google.com", resource: resource)
-        }
+    var entry = { () -> Entry in
+        let givenName = Name(family: "Huynh", text: "Huynh", given: ["Paul"])
+        let resource = Resource(id: "123456", name: [givenName], gender: "male", address: nil, birthDate: "1991-06-05")
+        return Entry(fullUrl: "www.google.com", resource: resource)
+    }
 
-        func getPatientData(success: @escaping (PatientData) -> Void, failure: @escaping (NetworkError) -> Void) {
-            shouldFailRequest ? failure(.noData) : success(PatientData(entry: [entry()]))
-        }
+    func getPatientData(success: @escaping (PatientData) -> Void, failure: @escaping (NetworkError) -> Void) {
+        shouldFailRequest ? failure(.noData) : success(PatientData(entry: [entry()]))
     }
 }
-
-
