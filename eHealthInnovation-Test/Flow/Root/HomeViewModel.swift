@@ -11,8 +11,8 @@ import UIKit
 class HomeViewModel {
     // MARK: - Properties
 
-    var patientService = PatientInformationService.sharedInstance
-    let builder = HomeBuilder()
+    private let patientService = PatientInformationService.sharedInstance
+    private let builder = HomeBuilder()
     var delegate: HomeViewModelDelegate?
     var entries = [Entry]()
 

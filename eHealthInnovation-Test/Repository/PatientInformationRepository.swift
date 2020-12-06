@@ -12,15 +12,15 @@ protocol PatientInformationRepository {
     func getPatientData(success: @escaping (PatientData) -> Void, failure: @escaping (NetworkError) -> Void)
 }
 
-class PatientRepository: PatientInformationRepository {
+class PatientRepository: NetworkService, PatientInformationRepository {
 
     static let sharedInstance = PatientRepository()
 
-    private init() {}
+    private override init() {}
 
     func getPatientData(success: @escaping (PatientData) -> Void, failure: @escaping (NetworkError) -> Void) {
         let url = URL(string:"http://hapi.fhir.org/baseDstu3/Patient?_pretty=true")
-        NetworkService.sharedInstance.fetch(method: .get, url: url, success: { (patientData: PatientData) in
+        fetch(method: .get, url: url, success: { (patientData: PatientData) in
             success(patientData)
         }) { error in
             failure(error)

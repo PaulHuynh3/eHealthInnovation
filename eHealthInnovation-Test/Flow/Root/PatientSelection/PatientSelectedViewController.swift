@@ -36,10 +36,10 @@ class PatientSelectedViewController: UIViewController {
         nameLabel.text = entry?.resource?.name?.first?.family
         birthDateLabel.text = entry?.resource?.birthDate
 
-        let city = entry?.resource?.address?.first?.city
-        let state = entry?.resource?.address?.first?.state
-        let postalCode = entry?.resource?.address?.first?.postalCode
-        let country = entry?.resource?.address?.first?.country
-        addressLabel.text = city
+        let city = entry?.resource?.address?.first?.city ?? ""
+        let state = entry?.resource?.address?.first?.state ?? ""
+        let postalCode = entry?.resource?.address?.first?.postalCode ?? ""
+        let country = entry?.resource?.address?.first?.country ?? ""
+        addressLabel.text = "\(city)-\(state)-\(postalCode)-\(country)"
     }
 }

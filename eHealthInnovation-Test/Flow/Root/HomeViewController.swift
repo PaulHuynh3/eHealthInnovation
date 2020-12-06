@@ -27,10 +27,12 @@ class HomeViewController: UIViewController {
     // MARK: - Setup
 
     func setup() {
-        tableView.delegate = self
-        tableView.dataSource = self
         registerNibForTableView(cellType: String(describing: PatientNameCell.self), tableView: tableView)
         titleLabel.text = viewModel.setTitle(.loading)
+        fetchPatientData()
+    }
+
+    private func fetchPatientData() {
         viewModel.fetchPatientInformation(success: { [weak self] in
             guard let self = self else { return }
             self.tableView.reloadData()

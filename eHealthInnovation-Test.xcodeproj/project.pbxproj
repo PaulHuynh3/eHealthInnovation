@@ -28,6 +28,7 @@
 		EBD4F9052570C8D800E979AA /* PatientSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F9042570C8D800E979AA /* PatientSelectedViewController.swift */; };
 		EBD4F9072570C8F400E979AA /* PatientSelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD4F9062570C8F400E979AA /* PatientSelectedViewController.storyboard */; };
 		EBD4F9092570CED600E979AA /* PatientSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */; };
+		EBDBBFA8257D7B7700F67AA4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBBFA7257D7B7700F67AA4 /* NetworkError.swift */; };
 		EBEE173E25702A93006D1846 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE173D25702A93006D1846 /* TableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		EBD4F9042570C8D800E979AA /* PatientSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSelectedViewController.swift; sourceTree = "<group>"; };
 		EBD4F9062570C8F400E979AA /* PatientSelectedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientSelectedViewController.storyboard; sourceTree = "<group>"; };
 		EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSelectedViewModel.swift; sourceTree = "<group>"; };
+		EBDBBFA7257D7B7700F67AA4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EBEE173D25702A93006D1846 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,8 +183,8 @@
 		EB31CE19257019D1000241D7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EBDBBFA6257D7B5500F67AA4 /* NetworkService */,
 				EB31CE1D25701A45000241D7 /* PatientInformationService.swift */,
-				EB23971D257062F2002712A7 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -244,6 +246,15 @@
 				EBD4F9082570CED600E979AA /* PatientSelectedViewModel.swift */,
 			);
 			path = PatientSelection;
+			sourceTree = "<group>";
+		};
+		EBDBBFA6257D7B5500F67AA4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				EB23971D257062F2002712A7 /* NetworkService.swift */,
+				EBDBBFA7257D7B7700F67AA4 /* NetworkError.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		EBEE173C25702A80006D1846 /* Helper */ = {
@@ -367,6 +378,7 @@
 				EB31CE1C257019F2000241D7 /* Patient.swift in Sources */,
 				EB23971E257062F2002712A7 /* NetworkService.swift in Sources */,
 				EB31CDF325701888000241D7 /* AppDelegate.swift in Sources */,
+				EBDBBFA8257D7B7700F67AA4 /* NetworkError.swift in Sources */,
 				EBD4F9022570BBC700E979AA /* Extensions.swift in Sources */,
 				EBEE173E25702A93006D1846 /* TableView.swift in Sources */,
 				EB31CDF525701888000241D7 /* SceneDelegate.swift in Sources */,

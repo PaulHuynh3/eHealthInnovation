@@ -8,11 +8,7 @@
 
 import Foundation
 
-class NetworkService {
-
-    static let sharedInstance = NetworkService()
-
-    private init() {}
+class NetworkService: FetchService {
 
     func fetch<T: Codable>(method: RequestMethod, url: URL?, success: @escaping ((T) -> Void), failure: @escaping ((NetworkError) -> Void)) {
         guard let url = url else {
@@ -46,10 +42,8 @@ class NetworkService {
     }
 }
 
-enum NetworkError: Error {
-    case error(Error)
-    case invalidURL
-    case noData
+protocol FetchService {
+    func fetch<T: Codable>(method: RequestMethod, url: URL?, success: @escaping ((T) -> Void), failure: @escaping ((NetworkError) -> Void))
 }
 
 enum RequestMethod {
